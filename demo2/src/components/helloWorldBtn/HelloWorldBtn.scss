@@ -1,0 +1,29 @@
+$btnWidth: 150;
+$btnHeight: 40;
+$btnFontSize: 20;
+$btnBackgroundColor: #7777bb;
+$btnColor: #ccffff;
+
+.helloWorldBtn{
+    width: $btnWidth*1px;
+    height: $btnHeight*1px;
+    font-size:$btnFontSize*1px;
+    background: $btnBackgroundColor;
+    color: $btnColor;
+    padding-right: ($btnHeight + 2)*1px;
+    position: relative;
+}
+
+.helloWorldBtn span:nth-child(2) {
+    background: url('../../../resources/img/icon.png');
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    background-size: contain;
+    width: ($btnHeight - 2)*1px;
+    height: ($btnHeight - 2)*1px;
+    border: none;
+    margin: 0;
+    padding: 0;
+    outline: none;
+}
