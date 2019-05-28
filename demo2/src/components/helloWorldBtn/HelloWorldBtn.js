@@ -1,4 +1,6 @@
+/* eslint-disable no-console */
 import './HelloWorldBtn.scss';
+import _ from 'lodash';
 
 class HelloWorldBtn {
     // class property, which is es6 syntax
@@ -10,12 +12,11 @@ class HelloWorldBtn {
         this.$el = document.createElement('button');
         const imgSpan = document.createElement('span');
         const textSpan = document.createElement('span');
-        textSpan.innerHTML = options.text;
+        textSpan.innerHTML = _.upperFirst(options.text);
         this.$el.appendChild(textSpan);
         this.$el.appendChild(imgSpan);
         this.$el.addEventListener('click', this._clickHandler, false);
         this.$el.className = this.defaultClassName;
-        this.range = Array.from('12345');
     }
     _clickHandler(){
         const log = (message)=>{
@@ -24,7 +25,7 @@ class HelloWorldBtn {
         log("click button");
     }
     render(){
-        this.options.el.append(this.$el);
+        this.options.el.appendChild(this.$el);
     }
 }
 
